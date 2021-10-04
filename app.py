@@ -10,11 +10,12 @@ session.permanent = False
 
 db = mysql.connector.connect(
     host="us-cdbr-east-04.cleardb.com",
-    user="b8601831567355",
-    password="40a53098",
-    database="heroku_008b3dac9b6fd1b"
+    user="b2240387ecf19f",
+    password="c1dc2444",
+    database="heroku_c28759b091d9996"
 )
 
+#mysql://b2240387ecf19f:c1dc2444@us-cdbr-east-04.cleardb.com/heroku_c28759b091d9996?reconnect=true
 cursor = db.cursor()
 
 cursor.execute("CREATE TABLE IF NOT EXISTS gradusers (id INT PRIMARY KEY AUTO_INCREMENT, username VARCHAR(50), password VARCHAR(50))")
