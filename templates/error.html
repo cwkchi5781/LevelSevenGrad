@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+
+{% if error="login" %}
+<h2>Login incorrect please return to login in page to try again</h2>
+<button href="/login" type="button" class="btn btn-secondary btn-lg">Login</button><br>
+
+{% else  %}
+
+<h2>Sign Up failed, please return to sign up page to try again</h2>>
+<button href="/signup" type="button" class="btn btn-secondary btn-lg">Sign Up</button>
+
+{% endif %}
+
+
+{% endblock content %}
