@@ -1,5 +1,10 @@
 {% extends "layout.html" %}
 {% block content %}
+<h1>Sign Up</h1><br>
+
+ {% if message %}
+    <p class="alert alert-danger">{{ message }}</p><br>
+ {% endif %}
 
 <form action="/signuproute" method="POST">
   <div class="mb-3">
@@ -7,10 +12,12 @@
     <input type="text" class="form-control" id="username" name="username" aria-describedby="username">
   </div>
   <div class="mb-3">
-    <label for="exampleInputPassword1" class="form-label">Password</label>
-    <input type="password" class="form-control" id="exampleInputPassword1">
+    <label class="form-label">Password</label>
+    <input type="password" name="password" class="form-control" id="password">
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>
+
+requirements: password and username cannot be blank or longer than 50 characters, if those are met a error page shows up then taken username was userd
 
 {% endblock content %}
