@@ -26,11 +26,21 @@ def index():
 
 @app.route('/login', methods=["POST","GET"])
 def login():
-    return render_template("login.html")
+    if "user" in session:
+        name = session["user"]
+
+        return redirect(url_for("home"))
+    else:
+        return render_template("login.html")
 
 @app.route('/signup', methods=["POST", "GET"])
 def signin():
-    return render_template("signup.html", message="")
+    if "user" in session:
+        name = session["user"]
+
+        return redirect(url_for("home"))
+    else:
+        return render_template("signup.html", message="")
 
 @app.route('/home', methods=["POST", "GET"])
 def home():
