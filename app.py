@@ -15,6 +15,7 @@ db = mysql.connector.connect(
 )
 
 #mysql://b2240387ecf19f:c1dc2444@us-cdbr-east-04.cleardb.com/heroku_c28759b091d9996?reconnect=true
+#mysql://b2240387ecf19f:c1dc2444@us-cdbr-east-04.cleardb.com/heroku_c28759b091d9996?reconnect=true
 cursor = db.cursor()
 
 cursor.execute("CREATE TABLE IF NOT EXISTS gradusers (id INT PRIMARY KEY AUTO_INCREMENT, username VARCHAR(50), password VARCHAR(50))")
