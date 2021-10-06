@@ -6,7 +6,6 @@ app = Flask(__name__)
 
 app.secret_key = "abcdefg"
 
-session.permanent = False
 
 db = mysql.connector.connect(
     host="us-cdbr-east-04.cleardb.com",
